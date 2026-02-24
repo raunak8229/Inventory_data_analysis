@@ -1,166 +1,182 @@
-📦 Inventory Data Analysis & Optimization Project
-📌 Project Overview
+# 📦 Inventory Data Analysis & Optimization Project
+
+## 📌 Project Overview
 
 This project focuses on analyzing and optimizing inventory management using historical sales, inventory, and purchase data. The goal is to identify demand patterns, classify inventory importance, and design optimal ordering and replenishment strategies that reduce costs while maintaining high service levels.
 
-The analysis follows an end-to-end data analytics workflow, from data cleaning to actionable business recommendations.
+The analysis follows an **end-to-end data analytics workflow**, from data cleaning to actionable business recommendations.
 
-🎯 Objectives
+## 🎯 Objectives
 
-Understand sales and demand behavior
+* Understand sales and demand behavior
 
-Identify high-value and slow-moving products
+* Identify high-value and slow-moving products
 
-Classify inventory using ABC Analysis
+* Classify inventory using ABC Analysis
 
-Optimize order quantities using EOQ (Economic Order Quantity)
+* Optimize order quantities using EOQ (Economic Order Quantity)
 
-Determine optimal reorder timing using Reorder Point (ROP) & Safety Stock
+* Determine optimal reorder timing using Reorder Point (ROP) & Safety Stock
 
-Provide clear, data-driven business recommendations
+* Provide clear, data-driven business recommendations
 
-🧰 Tools & Technologies
+## 🧰 Tools & Technologies
 
-Python
+* **Python**
 
-Pandas, NumPy
+* **Pandas, NumPy**
 
-Matplotlib (optional for trends)
+* **Matplotlib** (optional for trends)
 
-Jupyter Notebook
+* **Jupyter Notebook**
 
-Note: Visualization dashboards (Power BI/Tableau) were not required for this project, as the focus was on analytical logic and inventory optimization.
+##### Note: Visualization dashboards (Power BI/Tableau) were not required for this project, as the focus was on analytical logic and inventory optimization.
 
-📂 Dataset Description
+## 📂 Dataset Description
 
 The project uses multiple datasets related to inventory operations:
 
-Sales Data – transaction-level sales quantity and revenue
+* **Sales Data** – transaction-level sales quantity and revenue
 
-Beginning Inventory – opening stock levels
+* **Beginning Inventory** – opening stock levels
 
-Ending Inventory – closing stock levels
+* **Ending Inventory** – closing stock levels
 
-Purchase Price Data – unit cost and vendor information
+* **Purchase Price Data** – unit cost and vendor information
 
-Invoice Data – procurement transactions
+* **Invoice Data** – procurement transactions
 
-🔄 Project Workflow
+**The repository focuses on the analysis and methodology. The datasets were excluded due to size constraints, which is standard practice. I can share them separately if needed.**
 
-1️⃣ Data Cleaning
+## 🔄 Project Workflow
 
-Standardized column names
+### 1️⃣ Data Cleaning
 
-Handled missing and “Unknown” values
+* Standardized column names
 
-Converted data types for numerical analysis
+* Handled missing and “Unknown” values
 
-Removed duplicate records
+* Converted data types for numerical analysis
 
-Ensured data consistency across datasets
+* Removed duplicate records
 
-2️⃣ Exploratory Data Analysis (EDA)
+* Ensured data consistency across datasets
 
-Analyzed sales trends and demand distribution
+### 2️⃣ Exploratory Data Analysis (EDA)
 
-Identified fast-moving and slow-moving products
+* Analyzed sales trends and demand distribution
 
-Examined vendor contribution to sales and cost
+* Identified fast-moving and slow-moving products
 
-Compared beginning vs ending inventory levels
+* Examined vendor contribution to sales and cost
 
-Key insight:
+* Compared beginning vs ending inventory levels
+
+## Key insight:
 A small number of products contribute disproportionately to total sales value (Pareto principle).
 
-3️⃣ ABC Analysis
+### 3️⃣ ABC Analysis
 
 Products were classified based on cumulative sales value:
 
-A items: Top ~70% of sales value
+* **A items**: Top ~70% of sales value
 
-B items: Next ~20%
+* **B items**: Next ~20%
 
-C items: Remaining ~10%
+* **C items**: Remaining ~10%
 
 This classification helps prioritize inventory control and monitoring efforts.
 
-4️⃣ EOQ (Economic Order Quantity) Analysis
+### 4️⃣ EOQ (Economic Order Quantity) Analysis
 
 EOQ was calculated to determine optimal order quantities using:
 
-Annual demand derived from sales data
+* Annual demand derived from sales data
 
-Assumed fixed ordering cost
+* Assumed fixed ordering cost
 
-Holding cost estimated as a percentage of unit purchase price
+* Holding cost estimated as a percentage of unit purchase price
 
-Outcome:
+## Outcome:
+
 EOQ highlighted opportunities to reduce overstocking and excessive ordering frequency.
 
-5️⃣ Reorder Point (ROP) & Safety Stock
+### 5️⃣ Reorder Point (ROP) & Safety Stock
 
-Calculated average daily demand per product
+* Calculated average daily demand per product
 
-Assumed constant lead time
+* Assumed constant lead time
 
-Incorporated demand variability
+* Incorporated demand variability
 
-Computed safety stock using a 95% service level
+* Computed safety stock using a 95% service level
 
-Determined reorder points to prevent stockouts
+* Determined reorder points to prevent stockouts
 
-📊 Final Inventory Policy
+## 📊 Final Inventory Policy
 
 Each product was assigned:
 
-ABC category
+* ABC category
 
-EOQ (optimal order quantity)
+* EOQ (optimal order quantity)
 
-Safety stock
+* Safety stock
 
-Reorder point
+* Reorder point
 
 This created a complete inventory control framework aligned with demand intensity and business risk.
 
-💡 Key Business Insights
+## 💡 Key Business Insights
 
-A-category items require strict monitoring and higher service levels
+* A-category items require strict monitoring and higher service levels
 
-Many C-category items contribute little to revenue but tie up capital
+* Many C-category items contribute little to revenue but tie up capital
 
-Inventory levels are not always aligned with actual demand
+* Inventory levels are not always aligned with actual demand
 
-Vendor concentration presents potential supply risk
+* Vendor concentration presents potential supply risk
 
-✅ Recommendations
+## ✅ Recommendations
 
-Apply strict EOQ and higher safety stock for A-category products
+* Apply strict EOQ and higher safety stock for A-category products
 
-Use moderate review cycles for B-category products
+* Use moderate review cycles for B-category products
 
-Simplify ordering and reduce inventory for C-category products
+* Simplify ordering and reduce inventory for C-category products
 
-Renegotiate pricing and diversify vendors for critical items
+* Renegotiate pricing and diversify vendors for critical items
 
-⚠️ Limitations
+## ⚠️ Limitations
 
-Ordering cost and lead time were assumed due to data limitations
+* Ordering cost and lead time were assumed due to data limitations
 
-Demand seasonality was simplified
+* Demand seasonality was simplified
 
-Real-world constraints such as minimum order quantities were not included
+* Real-world constraints such as minimum order quantities were not included
 
-🚀 Future Enhancements
+## 🚀 Future Enhancements
 
-Incorporate demand forecasting models
+* Incorporate demand forecasting models
 
-Use actual vendor lead times
+* Use actual vendor lead times
 
-Apply different service levels by ABC category
+* Apply different service levels by ABC category
 
-Build an executive dashboard for monitoring KPIs
+* Build an executive dashboard for monitoring KPIs
 
-🏁 Conclusion
+## 🏁 Conclusion
+
 
 This project demonstrates how data-driven inventory analysis can support smarter procurement decisions, reduce costs, and improve service levels. It showcases practical applications of ABC analysis, EOQ, and reorder point modeling in a real-world business context.
+
+---
+
+## 👤 Author
+
+**Raunak Ansari**
+
+Aspiring Data Analyst | Python | SQL | Power BI | Excel | Statistics
+
+- **LinkedIn**: (https://www.linkedin.com/in/raunakansari797)
+- **GMAIL**: (raunaka48@gmail.com)
